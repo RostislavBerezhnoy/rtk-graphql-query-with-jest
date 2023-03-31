@@ -1,12 +1,13 @@
-# Rtk-Graphql-Query-With-Jest-And-Vite
+# Simple react/typescript app with rtk-queries and graphql [in dev]
 
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
+<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="80"></a>
+<a alt="Vite logo" href="https://vitejs.dev" target="_blank" rel="noreferrer"><img src="https://vitejs.dev/logo-with-shadow.png" width="57"></a>
 
-✨ **This workspace has been created by [Nx](https://nx.dev)** ✨
+**This workspace has been created by [Nx](https://nx.dev) and uses [Vite](https://vitejs.dev/) build tool.**
 
 ## Development server
 
-Run `nx serve` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+Run `nx serve` for a dev server. Navigate to http://127.0.0.1:4200/. The app will automatically reload if you change any of the source files.
 
 ## Understand this workspace
 
@@ -16,6 +17,14 @@ Run `nx graph` to see a diagram of the dependencies of the projects.
 
 Run `npx nx connect-to-nx-cloud` to enable [remote caching](https://nx.app) and make CI faster.
 
-## Further help
+## Tech Stack
 
-Visit the [Nx Documentation](https://nx.dev) to learn more.
+React, Typescript, Redux Toolkit [RTK Query], GraphQL, NX, Vite, Jest
+
+## Feedback
+
+If you have any feedback, please reach out to me or feel free to open up a issue.
+
+## License
+
+[MIT](/LICENSE)
