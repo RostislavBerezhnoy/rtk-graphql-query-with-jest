@@ -1,7 +1,7 @@
 # Simple react/typescript app with rtk-queries and graphql [in dev]
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="80"></a>
-<a alt="Vite logo" href="https://vitejs.dev" target="_blank" rel="noreferrer"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Vitejs-logo.svg/2078px-Vitejs-logo.svg.png" width="50"></a>
+<a alt="Vite logo" href="https://vitejs.dev" target="_blank" rel="noreferrer"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Vitejs-logo.svg/2078px-Vitejs-logo.svg.png" width="55"></a>
 
 **This workspace has been created by [Nx](https://nx.dev) and uses [Vite](https://vitejs.dev/) build tool.**
 
