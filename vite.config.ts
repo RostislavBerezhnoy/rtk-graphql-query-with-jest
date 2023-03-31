@@ -1,7 +1,7 @@
 /// <reference types="vitest" />
 import { defineConfig } from 'vite'
+import tsconfigPaths from 'vite-tsconfig-paths'
 import react from '@vitejs/plugin-react'
-import viteTsConfigPaths from 'vite-tsconfig-paths'
 
 export default defineConfig({
   cacheDir: './node_modules/.vite/rtk-graphql-query-with-jest-and-vite',
@@ -18,15 +18,13 @@ export default defineConfig({
 
   plugins: [
     react(),
-    viteTsConfigPaths({
-      root: './',
-    }),
+    tsconfigPaths(),
   ],
 
   // Uncomment this if you are using workers.
   // worker: {
   //  plugins: [
-  //    viteTsConfigPaths({
+  //    tsconfigPaths({
   //      root: './',
   //    }),
   //  ],

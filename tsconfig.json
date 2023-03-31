@@ -9,7 +9,6 @@
   "compilerOptions": {
     "sourceMap": true,
     "baseUrl": "src",
-    "rootDir": "src",
     "target": "esnext",
     "module": "ESNext",
     "jsx": "preserve",
