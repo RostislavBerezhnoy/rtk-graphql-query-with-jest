@@ -6,6 +6,10 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   cacheDir: './node_modules/.vite/rtk-graphql-query-with-jest-and-vite',
 
+  define: {
+    'process.env': process.env
+  },
+
   server: {
     port: 4200,
     host: 'localhost',
@@ -20,15 +24,6 @@ export default defineConfig({
     react(),
     tsconfigPaths(),
   ],
-
-  // Uncomment this if you are using workers.
-  // worker: {
-  //  plugins: [
-  //    tsconfigPaths({
-  //      root: './',
-  //    }),
-  //  ],
-  // },
 
   test: {
     globals: true,
