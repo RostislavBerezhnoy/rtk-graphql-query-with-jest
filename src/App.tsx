@@ -1,16 +1,19 @@
 import { ReposQueries } from 'api'
-import NxWelcome from 'components/NxWelcome'
+import { ReposList } from 'components/ReposList'
 
 export function App() {
   const { useGetTypescriptReposListQuery } = ReposQueries
 
-  const { data: repos, isLoading: isReposLoading } = useGetTypescriptReposListQuery()
+  const { data: repos = [], isLoading: isReposLoading } = useGetTypescriptReposListQuery()
 
-  console.log(isReposLoading, repos)
+  if (isReposLoading) return <h1 className='accessory-title'>Loading...</h1>
+
+  if (repos?.length === 0) return <h1 className='accessory-title'>No data</h1>
 
   return (
-    <div>
-      <NxWelcome title='rtk-graphql-query-with-jest-and-vite' />
+    <div className='app-container'>
+      <h2 className='welcome'>Welcome to my app</h2>
+      <ReposList list={repos} />
     </div>
   )
 }
