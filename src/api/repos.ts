@@ -9,7 +9,6 @@ export const ReposQueries = createApi({
   reducerPath: REPOS_TYPE,
   baseQuery: graphqlBaseQueryFn(),
   tagTypes: [REPOS_TYPE],
-  keepUnusedDataFor: 30,
   endpoints: build => ({
     getTypescriptReposList: build.query<Repository[], void>({
       query: () => ({
