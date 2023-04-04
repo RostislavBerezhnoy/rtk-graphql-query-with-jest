@@ -1,6 +1,6 @@
 # Simple react/typescript app with rtk-queries and graphql [in dev]
 
-**This project lists the most starred typescript github repos. Workspace has been created by [Nx](https://nx.dev) and uses [Vite](https://vitejs.dev/) build tool.**
+This project lists the most starred typescript github repos. Workspace has been created by [Nx](https://nx.dev) and uses [Vite](https://vitejs.dev/) build tool.
 
 ## Running Demo
 

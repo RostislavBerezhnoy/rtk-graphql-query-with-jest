@@ -9,3 +9,5 @@ export const store = configureStore({
   reducer: rootReducer,
   middleware: getDefaultMiddleware => [...getDefaultMiddleware(), ReposQueries.middleware],
 })
+
+export type RootState = ReturnType<typeof store.getState>
