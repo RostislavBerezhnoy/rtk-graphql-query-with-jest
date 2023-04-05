@@ -10,6 +10,10 @@ Run `nx serve` for a dev server. Navigate to http://127.0.0.1:4200/. The app wil
 
 ![App Screenshot](./app.png)
 
+## Testing
+
+Run `nx test` to launch the test runner in the interactive watch mode.
+
 ## Understand this workspace
 
 Run `nx graph` to see a diagram of the dependencies of the projects.

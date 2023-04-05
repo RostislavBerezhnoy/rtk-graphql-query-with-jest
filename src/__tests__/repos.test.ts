@@ -10,17 +10,15 @@ import { API_URL, ACCESS_TOKEN } from 'config'
 
 const fetchMocker = createFetchMock(vi)
 
-describe('mocking aborts', () => {
-  beforeEach((): void => fetchMocker.resetMocks())
-})
-
 describe('verify getTypescriptReposList endpoint', () => {
+  beforeEach((): void => fetchMocker.resetMocks())
+
   const storeRef = setupStore(ReposQueries)
   fetchMocker.mockResponse(JSON.stringify({}))
 
   test('request is correct', () =>
     storeRef.store
-      .dispatch<any>(ReposQueries.endpoints.getTypescriptReposList.initiate(undefined))
+      .dispatch<any>(ReposQueries.endpoints.getTypescriptReposList.initiate())
       .then(() => {
         expect(fetchMocker).toBeCalledTimes(1)
         const { method, headers, url } = fetchMocker.mock.calls[0][0] as Request
@@ -31,12 +29,13 @@ describe('verify getTypescriptReposList endpoint', () => {
         expect(url).toBe(API_URL)
         expect(authorization).toBe(`Bearer ${ACCESS_TOKEN}`)
       }))
+
   test('successful response', () => {
     const storeRef = setupStore(ReposQueries)
     fetchMocker.mockResponse(JSON.stringify(mockRepos))
 
     return storeRef.store
-      .dispatch<any>(ReposQueries.endpoints.getTypescriptReposList.initiate(undefined))
+      .dispatch<any>(ReposQueries.endpoints.getTypescriptReposList.initiate())
       .then((action: any) => {
         const { status, /* data, */ isSuccess } = action
         expect(status).toBe('fulfilled')
@@ -44,6 +43,7 @@ describe('verify getTypescriptReposList endpoint', () => {
         //expect(data).toStrictEqual(mockRepos)
       })
   })
+
   test('unsuccessful response', () => {
     const storeRef = setupStore(ReposQueries)
     fetchMocker.mockReject(new Error('Internal Server Error'))
