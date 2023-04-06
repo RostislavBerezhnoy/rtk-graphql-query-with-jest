@@ -1,1 +1,1 @@
-export const ACCESS_TOKEN = process.env.REACT_APP_ACCESS_TOKEN || ''
+export const ACCESS_TOKEN = process.env.REACT_APP_GITHUB_ACCESS_TOKEN || ''
