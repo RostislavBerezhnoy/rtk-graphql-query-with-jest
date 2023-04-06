@@ -10,7 +10,7 @@ Run `nx serve` for a dev server. Navigate to http://127.0.0.1:4200/. The app wil
 
 ![App Screenshot](./app.png)
 
-## Testing
+## Tests
 
 Run `nx test` to launch the test runner in the interactive watch mode.
 

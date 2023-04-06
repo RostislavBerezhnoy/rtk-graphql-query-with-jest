@@ -7,6 +7,12 @@ import {
   Middleware,
   Reducer,
 } from '@reduxjs/toolkit'
+import { beforeEach, afterEach } from 'vitest'
+
+/*
+  Modified version of RTK Query's helper function:
+  https://github.com/reduxjs/redux-toolkit/blob/master/packages/toolkit/src/query/tests/helpers.tsx
+*/
 
 export function setupStore<
   A extends {
@@ -44,8 +50,15 @@ export function setupStore<
     api,
     store: initialStore,
   }
-  const store = getStore() as StoreType
-  refObj.store = store
+
+  beforeEach(() => {
+    const store = getStore() as StoreType
+    refObj.store = store
+  })
+
+  afterEach(() => {
+    refObj.store.dispatch(api.util.resetApiState())
+  })
 
   return refObj
 }
