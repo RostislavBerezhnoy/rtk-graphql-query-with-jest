@@ -1,6 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import 'cross-fetch/polyfill'
+import 'whatwg-fetch'
 import createFetchMock from 'vitest-fetch-mock'
 import { vi } from 'vitest'
 
