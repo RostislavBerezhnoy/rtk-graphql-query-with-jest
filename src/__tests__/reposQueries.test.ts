@@ -25,7 +25,8 @@ describe.skip('verify getTypescriptReposList endpoint', () => {
         .dispatch<any>(ReposQueries.endpoints.getTypescriptReposList.initiate())
         .then(() => {
           //TODO: fix later
-          //It doesn't work because ReposQueries has a custom baseQuery. That's why the real api is called instead of fetchMocker
+          //This line doesn't work because ReposQueries has a custom baseQuery with GraphQL client,
+          //that's why the real api is called instead of fetchMocker
           expect(fetchMocker).toBeCalledTimes(1)
           const { method, headers, url } = fetchMocker.mock.calls[0][0] as Request
 

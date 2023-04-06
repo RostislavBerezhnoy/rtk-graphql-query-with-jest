@@ -9,11 +9,6 @@ import {
 } from '@reduxjs/toolkit'
 import { beforeEach, afterEach } from 'vitest'
 
-/*
-  Modified version of RTK Query's helper function:
-  https://github.com/reduxjs/redux-toolkit/blob/master/packages/toolkit/src/query/tests/helpers.tsx
-*/
-
 export function setupStore<
   A extends {
     reducer: Reducer<any, any>

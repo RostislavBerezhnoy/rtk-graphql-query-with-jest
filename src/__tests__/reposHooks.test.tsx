@@ -36,6 +36,7 @@ describe('useGetTypescriptReposListQuery', () => {
     expect(nextResponse.isSuccess).toBe(true)
   })
   //TODO: fix later
+  //Problem: https://github.com/RostislavBerezhnoy/rtk-graphql-query-with-jest-and-vite/blob/develop/src/__tests__/reposQueries.test.ts#L28
   test('fail', async () => {
     fetchMocker.mockReject(new Error('Internal Server Error'))
     const { result, waitForNextUpdate } = renderHook(() => useGetTypescriptReposListQuery(), {
