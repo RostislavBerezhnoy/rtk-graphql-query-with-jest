@@ -24,7 +24,7 @@ Run `npx nx connect-to-nx-cloud` to enable [remote caching](https://nx.app) and 
 
 ## Tech Stack
 
-React, Typescript, Redux Toolkit [RTK Query], GraphQL, NX, Vite, Jest, SCSS
+React, Typescript, Redux Toolkit [RTK Query], GraphQL, NX, Vite, Vitest, Jest, SCSS
 
 ## Feedback
 
